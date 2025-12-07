@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MovieRecs — Watchlist</title>
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <link rel="stylesheet" href="/src/styles/responsive.css">
+</head>
+<body>
+  <header></header>
+
+  <main class="container">
+    <section class="section">
+      <div class="section-head">
+        <h2>My Watchlist</h2>
+        <button id="clear-watchlist" class="btn">Clear watchlist</button>
+      </div>
+
+      <div id="watchlist-grid" class="grid"></div>
+      <div id="watchlist-empty" class="muted hidden">Your watchlist is empty. Add some titles!</div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <div id="details-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/pages/watchlist.js"></script>
+</body>
+</html>

@@ -5,9 +5,55 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movies-recommender</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+  <link rel="stylesheet" href="/src/styles/responsive.css">
   </head>
   <body>
-    <div id="app"></div>
+      <header></header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Find something great to watch</h1>
+        <p class="sub">Trending, personalized picks and popular movies & series.</p>
+        <div class="hero-actions">
+          <a href="/search.html" class="btn primary">Search titles</a>
+          <a href="/watchlist.html" class="btn">My Watchlist</a>
+        </div>
+      </div>
+      <div class="hero-right" id="hero-poster">
+        <!-- big poster from trending -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Trending This Week</h2>
+        <a href="/search.html?q=trending" class="small-link">See more</a>
+      </div>
+      <div id="trending-grid" class="grid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Top Rated</h2>
+        <a href="/search.html?q=top_rated" class="small-link">See more</a>
+      </div>
+      <div id="toprated-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <!-- details modal -->
+  <div id="details-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+    <!-- <div id="app"></div> -->
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/pages/home.js"></script>
   </body>
 </html>

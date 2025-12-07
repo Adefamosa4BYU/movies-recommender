@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MovieRecs — Search</title>
+  <link rel="stylesheet" href="/src/styles/style.css">
+  <link rel="stylesheet" href="/src/styles/responsive.css">
+</head>
+<body>
+  <header></header>
+
+  <main class="container">
+    <section class="search-bar-wrap">
+      <form id="search-form" class="search-form" role="search">
+        <input id="query" name="q" placeholder="Search movies or series..." aria-label="Search" />
+        <button class="btn primary" type="submit">Search</button>
+      </form>
+
+      <div class="filters">
+        <select id="genre-select"><option value="">All genres</option></select>
+        <select id="type-select">
+          <option value="movie">Movie</option>
+          <option value="tv">TV Series</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="section">
+      <div id="results-head" class="section-head"><h2>Search results</h2></div>
+      <div id="results-grid" class="grid"></div>
+      <div id="results-empty" class="muted hidden">No results yet — try a different search.</div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <div id="details-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/pages/search.js"></script>
+</body>
+</html>
