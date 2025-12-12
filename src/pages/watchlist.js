@@ -18,7 +18,7 @@ function renderWatchlist(){
   empty.classList.add("hidden");
   list.forEach(item => {
     const card = buildCard(item, item.type || 'movie');
-    // add remove button overlay
+
     const removeBtn = document.createElement('button');
     removeBtn.className = 'btn';
     removeBtn.textContent = 'Remove';
@@ -34,7 +34,6 @@ function renderWatchlist(){
   });
 }
 
-/* show details on card click */
 document.addEventListener("click", async (e)=>{
   const card = e.target.closest(".movie-card");
   if(!card) return;

@@ -56,7 +56,6 @@ async function doSearch(query){
   }
 }
 
-/* delegate click */
 document.addEventListener("click", async (e)=>{
   const card = e.target.closest(".movie-card");
   if(!card) return;
